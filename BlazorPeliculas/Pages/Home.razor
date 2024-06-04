@@ -1,0 +1,59 @@
+﻿@page "/"
+
+<!-- #region Expresion implicita @using BlazorPeliculas.Utilidades -->
+<p>Hola, @Transformar(nombre)</p>
+<p>Hola Clase, @UtilidadesString.TransformarUpper(nombre)</p>
+<!-- #endregion -->
+<!-- #region Expresion explicita -->
+<p>Vamos a sumar 2 + 2 = @(2 + 2)</p>
+<!-- #endregion -->
+<!--Expresion lambda-->
+<button @onclick=@(() => Console.WriteLine("Me han clickeado"))>Presioname</button>
+
+<button @onclick=@ManejarClickBoton>Presioname Implicita</button>
+
+<div>
+    <h3>Pelicula</h3>
+    <p>Título: <b>@WakandaForever.Titulo</b></p>
+    <p>Fecha de lazamiento: <b>@WakandaForever.FechaLanzamiento.ToString("dd MMM yyyy")</b></p>
+</div>
+
+<div>
+    <h3>Pelicula</h3>
+    <ListadoPeliculas Peliculas="ObtenerPeliculas()"/>
+</div>
+
+@code{
+    string nombre = "Glendy";
+    string Transformar(string valor) => valor.ToUpper();
+
+    Pelicula WakandaForever { get { return ObtenerPelicula(); }}
+    <!--List<Pelicula> Peliculas {get { return ObtenerPeliculas();  }}-->
+
+    Pelicula ObtenerPelicula()
+    {
+        return new Pelicula
+            {
+                Titulo = "Wakanda Forever",
+                FechaLanzamiento = new DateTime(2024, 06, 01)
+            };
+    }
+
+    List<Pelicula> ObtenerPeliculas()
+    {
+        return new List<Pelicula>()
+        {
+            new Pelicula{ Titulo = "Wakanda Forever", FechaLanzamiento = new DateTime(2024, 06, 01) },
+            new Pelicula{ Titulo = "Moana", FechaLanzamiento = new DateTime(2022, 11, 11) },
+            new Pelicula{ Titulo = "Inception", FechaLanzamiento = new DateTime(2022, 11, 11) }
+        };
+    }
+
+
+    void ManejarClickBoton()
+    {
+        Console.WriteLine("Me han clickeado desde una función");
+    }
+
+    
+}

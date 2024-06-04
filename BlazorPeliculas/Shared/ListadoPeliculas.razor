@@ -1,0 +1,102 @@
+﻿<!--BUCLES-->
+@if (Peliculas is null)
+{
+    <img alt="cargando ..." src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExd3BwaWIzMTR3cXlnZjNmdXozeGdxNnBpYjh1N21rd2hlanVpeGlqeCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3oEjI6SIIHBdRxXI40/giphy.gif" />
+}
+else if (Peliculas.Count == 0)
+{
+    <p>No se encontraron Peliculas.</p>
+}
+else
+{
+
+    <h4>Foreach</h4>
+    <ul>
+        <!--foreach (var pelicula in ObtenerPeliculas())-->
+        @foreach (var pelicula in Peliculas)
+        {
+            <PeliculaIndividual Pelicula="pelicula"/>
+            /*<li>
+                <p>
+                    Título:
+                    <b>@pelicula.Titulo</b>
+                    @if (DateTime.Today.Subtract(pelicula.FechaLanzamiento).Days <= 14)
+                    {
+                        <span style="color: red"> (¡Nuevo!)</span>
+                    }
+                </p>
+                <p>Fecha de lazamiento: <b>@pelicula.FechaLanzamiento.ToString("dd MMM yyyy")</b></p>
+            </li>*/
+        }
+    </ul>
+
+
+    @*<h4>MarkupString</h4>
+
+    <ul>
+        @foreach (var pelicula in ObtenerPeliculasMarkupString())
+        {
+            <li>
+                <p>
+                    Título:
+                    @((MarkupString)pelicula.Titulo)
+                    @if (DateTime.Today.Subtract(pelicula.FechaLanzamiento).Days <= 14)
+                    {
+                        <span style="color: red"> (¡Nuevo!)</span>
+                    }
+                </p>
+                <p>Fecha de lazamiento: <b>@pelicula.FechaLanzamiento.ToString("dd MMM yyyy")</b></p>
+            </li>
+        }
+    </ul>*@
+
+    @*
+            <h4>For</h4>
+            <ul>
+            <!--for (int i = 0; i < ObtenerPeliculas().Count(); i++)-->
+            @for (int i = 0; i < Peliculas.Count(); i++)
+            {
+            <li>
+            <!--<p>Título: <b>ObtenerPeliculas()[i].Titulo</b></p>-->
+            <p>Título: <b>@Peliculas[i].Titulo</b></p>
+            <p>Fecha de lazamiento: <b>@Peliculas[i].FechaLanzamiento.ToString("dd MMM yyyy")</b></p>
+            </li>
+            }
+
+            </ul>
+        *@
+}
+
+@code {
+
+    [Parameter]
+    public List<Pelicula>? Peliculas { get; set; }
+
+    <!-- Ciclo de vida de un componente  -->
+    <!-- Permite ejecutar una funcion al momemnto de inicializar un componente -->
+    /*protected override async Task OnInitializedAsync()
+    {
+        await Task.Delay(3000);
+        Peliculas = ObtenerPeliculas();
+    }*/
+
+    /*List<Pelicula> ObtenerPeliculas()
+    {
+        return new List<Pelicula>()
+        {
+            new Pelicula{ Titulo = "Wakanda Forever", FechaLanzamiento = new DateTime(2024, 06, 01) },
+            new Pelicula{ Titulo = "Moana", FechaLanzamiento = new DateTime(2022, 11, 11) },
+            new Pelicula{ Titulo = "Inception", FechaLanzamiento = new DateTime(2022, 11, 11) }
+        };
+    }*/
+
+    /*List<Pelicula> ObtenerPeliculasMarkupString()
+    {
+        return new List<Pelicula>()
+        {
+            new Pelicula{ Titulo = "<b>Wakanda Forever</b>", FechaLanzamiento = new DateTime(2024, 06, 01) },
+            new Pelicula{ Titulo = "<i>Moana</i>", FechaLanzamiento = new DateTime(2022, 11, 11) },
+            new Pelicula{ Titulo = "Inception", FechaLanzamiento = new DateTime(2022, 11, 11) }
+        };
+    }*/
+}

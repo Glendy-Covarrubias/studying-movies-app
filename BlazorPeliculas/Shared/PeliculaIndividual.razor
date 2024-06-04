@@ -1,0 +1,16 @@
+﻿<li>
+    <p>
+        Título:
+        <b>@Pelicula.Titulo</b>
+        @if (DateTime.Today.Subtract(Pelicula.FechaLanzamiento).Days <= 14)
+        {
+            <span style="color: red"> (¡Nuevo!)</span>
+        }
+    </p>
+    <p>Fecha de lazamiento: <b>@Pelicula.FechaLanzamiento.ToString("dd MMM yyyy")</b></p>
+</li>
+
+@code {
+    [Parameter]
+    public Pelicula Pelicula { get; set; } = null!;
+}

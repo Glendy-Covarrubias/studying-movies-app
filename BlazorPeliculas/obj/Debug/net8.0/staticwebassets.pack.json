@@ -1,0 +1,41 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\Glendy Covarrubias\\Documents\\netCore\\BlazorPeliculas\\BlazorPeliculas\\bin\\Debug\\net8.0\\wwwroot\\_framework\\blazor.webassembly.js",
+      "PackagePath": "staticwebassets\\_framework\\blazor.webassembly.js"
+    },
+    {
+      "Id": "C:\\Users\\Glendy Covarrubias\\Documents\\netCore\\BlazorPeliculas\\BlazorPeliculas\\obj\\Debug\\net8.0\\compressed\\cug35utegc.gz",
+      "PackagePath": "staticwebassets\\_framework\\blazor.webassembly.js.gz"
+    },
+    {
+      "Id": "C:\\Users\\Glendy Covarrubias\\Documents\\netCore\\BlazorPeliculas\\BlazorPeliculas\\wwwroot\\css\\app.css",
+      "PackagePath": "staticwebassets\\css\\app.css"
+    },
+    {
+      "Id": "C:\\Users\\Glendy Covarrubias\\Documents\\netCore\\BlazorPeliculas\\BlazorPeliculas\\wwwroot\\icon-192.png",
+      "PackagePath": "staticwebassets\\icon-192.png"
+    },
+    {
+      "Id": "C:\\Users\\Glendy Covarrubias\\Documents\\netCore\\BlazorPeliculas\\BlazorPeliculas\\wwwroot\\index.html",
+      "PackagePath": "staticwebassets\\index.html"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.BlazorPeliculas.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.BlazorPeliculas.props",
+      "PackagePath": "build\\BlazorPeliculas.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.BlazorPeliculas.props",
+      "PackagePath": "buildMultiTargeting\\BlazorPeliculas.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.BlazorPeliculas.props",
+      "PackagePath": "buildTransitive\\BlazorPeliculas.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

@@ -1,0 +1,18 @@
+﻿@page "/counter"
+
+<h3>Counter</h3>
+
+<br/>
+
+<ListadoPeliculas Peliculas="ObtenerPeliculas()" />
+
+@code {
+    List<Pelicula> ObtenerPeliculas()
+    {
+        return new List<Pelicula>()
+        {
+            new Pelicula{ Titulo = "Spider Man", FechaLanzamiento = new DateTime(2024, 06, 01) },
+            new Pelicula{ Titulo = "Batman", FechaLanzamiento = new DateTime(2022, 11, 11) }
+        };
+    }
+}
