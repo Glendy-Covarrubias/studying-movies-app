@@ -1026,3 +1026,4 @@ C:\Users\Glendy Covarrubias\Documents\netCore\BlazorPeliculas\BlazorPeliculas\ob
 C:\Users\Glendy Covarrubias\Documents\netCore\BlazorPeliculas\BlazorPeliculas\obj\Debug\net8.0\refint\BlazorPeliculas.dll
 C:\Users\Glendy Covarrubias\Documents\netCore\BlazorPeliculas\BlazorPeliculas\obj\Debug\net8.0\BlazorPeliculas.pdb
 C:\Users\Glendy Covarrubias\Documents\netCore\BlazorPeliculas\BlazorPeliculas\obj\Debug\net8.0\ref\BlazorPeliculas.dll
+C:\Users\Glendy Covarrubias\Documents\netCore\BlazorPeliculas\BlazorPeliculas\obj\Debug\net8.0\BlazorPeliculas.sourcelink.json
